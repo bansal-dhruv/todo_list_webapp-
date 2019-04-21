@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Edit Schedule</h1>
+<form method="POST" action="">
+
+	<div class="form-group">
+		<label>Start Date</label>
+		<input type="text" name="startdate" class="form-control" value="{{data1.startdate|date:'c'}}" required>
+	</div>
+
+	<div class="form-group">
+		<label>End Date</label>
+		<input type="text" name="enddate" class="form-control" value="{{data1.enddate|date:'c'}}" required>
+	</div>
+
+	<div class="form-group">
+		<!-- id="editor" -->
+		<label>Schedule</label>
+		<textarea name="work" class="form-control" id="editor" required>{{data1.work}}</textarea>
+	</div>
+
+	<p><input type="submit" class="btn btn-primary" value="Edit"></p>
+</form>	
+{% endblock %}

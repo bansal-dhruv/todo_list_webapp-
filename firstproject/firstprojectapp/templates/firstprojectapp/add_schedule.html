@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Add Article</h1>
+<form method="POST" action="">
+
+	<div class="form-group">
+		<label>Work</label>
+		<textarea name="work" class="form-control" id="editor" required></textarea>
+	</div>
+
+	<div class="form-group">
+		<label>Start Date and Time</label>
+		<input type="date" name="startdate" class="form-control" required>
+		<input type="time" name="starttime" class="form-control" required>
+	</div>
+
+	<div class="form-group">
+		<label>End Date and Time</label>
+		<input type="date" name="enddate" class="form-control" required>
+		<input type="time" name="endtime" class="form-control" required>
+	</div>
+
+	<p><input type="submit" class="btn btn-primary" value="Add"></p>
+</form>	
+{% endblock %}

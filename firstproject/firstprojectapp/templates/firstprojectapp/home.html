@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron text-center">
+	<h1>Welcome To Todo Schedule WebApp</h1>
+	<p class="lead">
+		Here you can create, update, delete your schedule!!!<br>
+	</p>
+
+    	{% if session.logged_in == 0 %}
+    		<p>
+    			<b>Register or Login to continue.</b>
+    		</p>
+		<a href="/register" class="btn btn-primary btn-lg">Register</a>
+		<a href="/login" class="btn btn-success btn-lg">Login</a>
+	{% else %}
+		<a href="/dashboard" class="btn btn-primary btn-lg">Dashboard</a>
+	{% endif %}
+
+</div>
+{% endblock %}
